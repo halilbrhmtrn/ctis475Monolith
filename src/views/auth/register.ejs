@@ -1,0 +1,31 @@
+<%- include('../common/header') %>
+<div class="ui middle aligned center aligned grid">
+  <div class="column">
+    <h2 class="ui image header">
+      <div class="content">
+        Register
+      </div>
+    </h2>
+    <form action="/auth/register" method="post" class="ui large form">
+      <div class="ui stacked secondary  segment">
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input type="text" name="username" placeholder="Username">
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input type="password" name="password" placeholder="Password">
+          </div>
+        </div>
+        <input type="submit" class="ui fluid large red submit button" value="Register">
+      </div>
+
+      <div class="ui error message"></div>
+
+    </form>
+  </div>
+</div>
+<%- include('../common/footer') %>

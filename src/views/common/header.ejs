@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <% if (typeof post !== 'undefined') { %>
+    <title>Blog - <%= post.name %></title>
+  <% } else { %>
+    <title>Blog - Home</title>
+  <% } %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="ui secondary pointing menu">
+        <a class="active item" href="/" >
+            Blogs
+        </a>
+        <a class="item"  href="/blogs/add">
+          New Blog Entry
+        </a>
+        <div class="right menu">
+            <% if (!session.user) { %>
+          <a class="ui item" href="/auth/login">
+            Login
+          </a>
+          <a class="ui item" href="/auth/register">
+            Register
+          </a>
+          <% } else { %>
+            <a class="ui item" href="/auth/logout">
+              Logout (<%= session.user.username %>)
+            </a>
+          <% } %>
+        </div>
+      </div>
+      <div class="ui segment">
+        <p></p>
+      </div>
+  <main role="main" class="container">

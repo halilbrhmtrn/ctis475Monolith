@@ -1,0 +1,21 @@
+<%- include('../common/header') %>
+<div class="ui main text container segment">
+  <div class="ui huge header">New Blog</div>
+
+  <form class="ui form" action="/blogs/add" method="POST" >
+      <div class="field">
+          <label>Title</label>
+          <input type="text" name="blog[title]" placeholder="Title" required>
+      </div>
+      <div class="field">
+          <label>Bdoy</label>
+          <textarea name="blog[body]" placeholder="Blog post goes here" required></textarea>
+      </div>
+      <div class="field">
+        <label>Image</label>
+        <input type="text" name="blog[image]" placeholder="Image" required>
+    </div>
+      <input class="ui teal basic button" type="submit">
+  </form>
+</div>
+<%- include('../common/footer') %>
